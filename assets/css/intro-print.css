@@ -1,0 +1,233 @@
+@page {
+  size: A4;
+  margin: 14mm 12mm;
+}
+
+:root {
+  --bg: #f2f5fa;
+  --paper: #ffffff;
+  --line: #d5deea;
+  --text: #17202f;
+  --muted: #4e5f77;
+  --accent: #2056a6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  color: var(--text);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    linear-gradient(145deg, #edf2f9, var(--bg));
+  line-height: 1.75;
+}
+
+.screen-tools {
+  width: min(980px, 94vw);
+  margin: 22px auto 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  border: 1px solid #c5d4ea;
+  background: #fff;
+  color: #24436f;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.88rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn.primary {
+  border-color: #99b7e6;
+  background: #eaf2ff;
+  color: #173c70;
+}
+
+.document {
+  width: min(980px, 94vw);
+  margin: 0 auto 32px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 12px 26px rgba(25, 39, 63, 0.08);
+  padding: 30px 30px 26px;
+}
+
+.title-block {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 18px 16px;
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
+}
+
+.doc-label {
+  margin: 0;
+  font-size: 0.84rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 4px 0 8px;
+  font-size: 1.9rem;
+  line-height: 1.28;
+}
+
+.summary {
+  margin: 0;
+  color: #2a4266;
+}
+
+.meta-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 18px;
+}
+
+.meta-grid div {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  font-size: 0.93rem;
+}
+
+.meta-grid strong {
+  color: #2f486d;
+}
+
+.essay-section {
+  margin-top: 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  padding: 16px 18px;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
+.essay-section h2 {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 1.05rem;
+}
+
+.essay-section p {
+  margin: 0 0 10px;
+  font-size: 0.98rem;
+  text-align: justify;
+}
+
+.essay-section p:last-child {
+  margin-bottom: 0;
+}
+
+.doc-footer {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px dashed #cdd8e8;
+  color: var(--muted);
+  font-size: 0.86rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 760px) {
+  .document {
+    padding: 18px;
+  }
+
+  .meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .meta-grid div {
+    grid-template-columns: 82px 1fr;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 12pt;
+    line-height: 1.72;
+  }
+
+  .screen-tools {
+    display: none;
+  }
+
+  .document {
+    width: 100%;
+    margin: 0;
+    border: 1px solid #cfd8e6;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    background: #fff;
+  }
+
+  .title-block,
+  .essay-section {
+    border-color: #cfd8e6;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .title-block {
+    padding: 7mm;
+  }
+
+  .essay-section {
+    margin-top: 4mm;
+    padding: 7mm;
+  }
+
+  h1 {
+    font-size: 18pt;
+    line-height: 1.34;
+  }
+
+  .summary {
+    font-size: 11.2pt;
+    line-height: 1.72;
+  }
+
+  .meta-grid div {
+    font-size: 10.8pt;
+  }
+
+  .essay-section h2 {
+    font-size: 13pt;
+    margin-bottom: 2.6mm;
+  }
+
+  .essay-section p {
+    font-size: 11.2pt;
+    line-height: 1.75;
+    margin-bottom: 3mm;
+  }
+
+  .doc-footer {
+    margin-top: 4mm;
+    padding-top: 3mm;
+    font-size: 10pt;
+  }
+
+  .page-break {
+    break-before: page;
+    page-break-before: always;
+  }
+}

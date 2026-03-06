@@ -11,6 +11,7 @@
 </head>
 <body>
   <a class="home-link" href="../index.html">메인으로</a>
+  <button class="print-link" type="button" onclick="window.print()">인쇄하기</button>
   <main class="wrap">
     <section class="panel intro-card">
       <div class="hero">
@@ -105,6 +106,7 @@
                 </ul>
               </div>
               <div>
+                <img src="../assets/images/project1-image.png" alt="프로젝트 1 관련 이미지" />
                 <strong>Lab 채널 삽입</strong>
                 <ul>
                   <li>지각 기반 채널 분리로 왜곡 최소화</li>
@@ -379,18 +381,16 @@
           <h3>아키텍처 다이어그램</h3>
           <div class="arch-layout">
             <div class="arch-root">C++ Core</div>
-            <svg class="arch-svg arch-svg-seven" viewBox="0 0 1000 180" preserveAspectRatio="none" aria-hidden="true">
+            <svg class="arch-svg" viewBox="0 0 1000 180" preserveAspectRatio="none" aria-hidden="true">
               <path d="M500 6 V56" />
-              <path d="M60 56 H940" />
-              <path d="M60 56 V126" />
-              <path d="M206 56 V126" />
-              <path d="M353 56 V126" />
+              <path d="M130 56 H870" />
+              <path d="M130 56 V126" />
+              <path d="M315 56 V126" />
               <path d="M500 56 V126" />
-              <path d="M647 56 V126" />
-              <path d="M794 56 V126" />
-              <path d="M940 56 V126" />
+              <path d="M685 56 V126" />
+              <path d="M870 56 V126" />
             </svg>
-            <div class="arch-branches arch-branches-seven">
+            <div class="arch-branches arch-branches-five">
               <div class="arch-node">
                 <div class="arch-node-title">LabGuard-S</div>
                 <ul class="arch-subnodes">
@@ -416,20 +416,10 @@
                 </ul>
               </div>
               <div class="arch-node">
-                <div class="arch-node-title">LabGuard-F (Video)</div>
+                <div class="arch-node-title">LabGuard-F</div>
                 <ul class="arch-subnodes">
                   <li>+ ffmpeg</li>
-                </ul>
-              </div>
-              <div class="arch-node">
-                <div class="arch-node-title">LabGuard-F (Image)</div>
-                <ul class="arch-subnodes">
                   <li>+ magick++</li>
-                </ul>
-              </div>
-              <div class="arch-node">
-                <div class="arch-node-title">LabGuard-F (PDF)</div>
-                <ul class="arch-subnodes">
                   <li>+ podofo / mupdf</li>
                 </ul>
               </div>
@@ -437,7 +427,6 @@
           </div>
         </article>
 
-        <figcaption>프로젝트 3 이미지 (파일명: project3-image.jpg)</figcaption>
       </figure>
 
       <div class="block">

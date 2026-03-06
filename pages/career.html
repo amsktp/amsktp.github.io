@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>경력기술서 | 비가시성 워터마크 엔지니어 이찬양</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/portfolio.css" />
+</head>
+<body>
+  <a class="home-link" href="../index.html">메인으로</a>
+
+  <main class="wrap">
+    <section class="panel intro-card">
+      <div class="hero">
+        <h1>경력기술서 | 비가시성 워터마크 연구, SDK 상용화, 운영 자동화를 End-to-End로 수행한 소프트웨어 엔지니어</h1>
+      </div>
+
+      <div class="profile">
+        <img class="photo" src="../assets/images/profile.png" alt="프로필 사진" />
+        <div>
+          <div class="profile-top">
+            <h2>이찬양</h2>
+            <p class="role">Software Engineer / Watermarking</p>
+          </div>
+          <div class="profile-grid">
+            <div><strong>연락처</strong>010-2985-8992</div>
+            <div><strong>이메일</strong>yhutcnx@gmail.com</div>
+            <div><strong>학력</strong>동서울대학교 컴퓨터정보과 / 국가평생교육진흥원 컴퓨터공학(학사)</div>
+            <div><strong>총 경력</strong>5년 5개월 (2020.10 - 현재, 2026년 3월 기준)</div>
+            <div><strong>자격증</strong>정보처리기사, SQLD, 컴퓨터활용능력 1급</div>
+            <div><strong>전문 분야</strong>비가시성 워터마크 알고리즘 및 멀티플랫폼 SDK</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro-section">
+        <h2>핵심 역량 요약</h2>
+        <ul>
+          <li>비가시성 워터마크 알고리즘 연구에서 상용 B2B 솔루션 배포까지 전체 라이프사이클 주도</li>
+          <li>단일 C++ 코어 엔진 중심의 멀티플랫폼 아키텍처(Desktop/Mobile/Web) 설계 및 구현</li>
+          <li>촬영, 캡쳐, 저비트(팩스/2Bit), PDF/동영상 등 비정형 환경 검출 안정성 개선</li>
+          <li>LabGuard 제품군 확장 과정에서 License/Tracer/Manager까지 제품 운영 체계 구축</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">C++ Core Engine</span>
+          <span class="chip">Invisible Watermark</span>
+          <span class="chip">JNI / Obj-C++</span>
+          <span class="chip">WASM</span>
+          <span class="chip">OpenCV / FFMPEG</span>
+          <span class="chip">React / NestJS</span>
+          <span class="chip">On-premise 대응</span>
+        </div>
+      </div>
+
+      <div class="intro-section">
+        <h2>경력 개요</h2>
+        <article class="career-card">
+          <div class="career-head">
+            <h3>스냅태그 주식회사</h3>
+            <span class="career-period">2020.10 - 재직 중</span>
+          </div>
+          <div class="career-grid">
+            <div><strong>소속</strong>정보보호팀 / 기술연구셀</div>
+            <div><strong>직급</strong>대리</div>
+            <div><strong>역할</strong>비가시성 워터마크 코어 엔진 개발, 멀티플랫폼 SDK 아키텍처 설계, 제품화 및 운영 자동화</div>
+            <div><strong>주요 성과</strong>LabGuard 상용 솔루션 핵심 기술 구축, 특허 출원/등록, 대기업 계열사·국가기관 도입 대응</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel print-page">
+      <div class="project-head">
+        <h2>주요 프로젝트 상세 1 | 비가시성 워터마크 연구 및 코어 고도화</h2>
+        <span class="project-meta">지속 과제 · 1~2명</span>
+      </div>
+
+      <div class="block">
+        <strong>프로젝트 목적</strong>
+        <ul>
+          <li>촬영/캡쳐 환경에서도 높은 검출률을 유지하는 워터마크 알고리즘 상용화</li>
+          <li>기존 프로토타입을 서비스 가능한 코어 구조로 재설계</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <strong>문제 상황</strong>
+        <ul>
+          <li>기존 방식은 비가시성과 검출 안정성 간 Trade-off가 커 상용 배포가 어려움</li>
+          <li>데스크톱 중심 검증 체계로 모바일/웹 환경 품질 보장이 어려움</li>
+          <li>팩스, 2Bit, CMYK 등 특수 포맷에서 삽입 안정성 저하</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <strong>실행 및 구현</strong>
+        <ul>
+          <li>삽입/검출 공통 엔진(C++)과 플랫폼별 입출력 로직 분리</li>
+          <li>RGB 기반 한계를 분석하고 Lab 색공간 삽입 구조로 전환</li>
+          <li>카메라 프레임 기반 검출 앱 및 재현 가능한 실험 환경 구축</li>
+          <li>Desktop/Android/iOS/Web 통합 테스트 프레임워크 정립</li>
+          <li>검출 파이프라인 리소스 최적화 및 저비트 영상 대응 방식 개발</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <strong>성과</strong>
+        <ul>
+          <li>동일 조건에서 검출 성공률 개선 및 플랫폼 확장(Windows 한정 → 전 플랫폼 지원)</li>
+          <li>플랫폼별 분리 소스 체계에서 단일 코어 중심 체계로 전환</li>
+          <li>특허 2건 확보: 2Bit 영상 삽입 방식(출원), 비가시성 강화 방식(등록)</li>
+        </ul>
+      </div>
+
+      <div class="block divider">
+        <strong>개인 기여</strong>
+        <ul>
+          <li>알고리즘 코어 로직 및 실험 체계 단독 주도</li>
+          <li>JNI/Objective-C++ 브릿지 구성으로 멀티플랫폼 SDK 기반 마련</li>
+          <li>모바일 카메라 검증 체계 및 저비트 포맷 대응 구현</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel print-page">
+      <div class="project-head">
+        <h2>주요 프로젝트 상세 2 | LabGuard 제품군 상용화 및 확장</h2>
+        <span class="project-meta">지속 과제 · 4~6명</span>
+      </div>
+
+      <div class="block">
+        <strong>프로젝트 목적</strong>
+        <ul>
+          <li>유출본 워터마크 검출을 통해 유출자 특정이 가능한 B2B 보안 솔루션 제품군 구축</li>
+          <li>고객사 도입이 가능한 SDK/앱/운영 체계 형태로 서비스 패키징</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <strong>주요 구현 범위</strong>
+        <ul>
+          <li>LabGuard-S/P: 화면 워터마크 솔루션 및 파트너 보안 에이전트 연동</li>
+          <li>LabGuard-M/W: 고객사 앱/웹 연동형 워터마크 SDK 프로토타입 개발 및 인수인계</li>
+          <li>LabGuard-F: 이미지/동영상/PDF 삽입 구조 검토 및 라이브러리화</li>
+          <li>License: 온프레미스 환경 대응 오프라인 권한 파일 구조 설계 및 무결성 검증</li>
+          <li>Tracer: Android/Windows 기반 고객사 내부 검출 앱 개발</li>
+          <li>Manager: 영업-운영 플로우 자동화를 위한 웹/백엔드 구축(React, NestJS)</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <strong>기술 의사결정 사례</strong>
+        <ul>
+          <li>PDF 레스터화 미채택: 제거 난이도는 높지만 용량/품질 저하가 커 레이어 삽입 방식 채택</li>
+          <li>동영상 처리에서 FFMPEG Filter 전략 채택: 코덱/메타데이터 처리 부담을 줄여 운영 안정성 확보</li>
+          <li>비통신 환경 고객사를 고려해 서버 의존도를 낮춘 오프라인 라이선스 구조 우선 설계</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <strong>성과</strong>
+        <ul>
+          <li>연구 기술을 상용 제품군으로 전환해 실제 도입 가능한 형태로 배포</li>
+          <li>대기업 계열사 및 국가기관 대상 도입 프로젝트 대응</li>
+          <li>수작업 중심 운영 플로우를 자동화해 휴먼에러 리스크 감소</li>
+        </ul>
+      </div>
+
+      <div class="block divider">
+        <strong>개인 기여</strong>
+        <ul>
+          <li>LabGuard 전 제품군 초기 프로토타입 설계 및 핵심 기능 구현</li>
+          <li>플랫폼 담당자 대상 기술 인수인계 및 코어 아키텍처 표준화</li>
+          <li>Manager 프로젝트에서 웹/백엔드 일부 직접 개발 및 API/DB 설계</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel print-page">
+      <div class="project-head">
+        <h2>기술 스택 및 기타 이력</h2>
+        <span class="project-meta">요약</span>
+      </div>
+
+      <div class="block">
+        <strong>핵심 기술</strong>
+        <ul>
+          <li>Language: C++, Kotlin, Swift, TypeScript</li>
+          <li>Platform: Windows, macOS, Linux, Android, iOS, Web(WASM)</li>
+          <li>Media/Infra: FFMPEG, magick++, podofo, mupdf, OpenGL</li>
+          <li>Backend/Web: React, NestJS, CRUD API, License/Account DB</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <strong>지식재산권</strong>
+        <ul>
+          <li>2Bit 영상 워터마크 삽입 방식 관련 특허 (출원)
+            <ul>
+              <li><a href="https://patents.google.com/patent/KR20250169131A">https://patents.google.com/patent/KR20250169131A</a></li>
+            </ul>
+          </li>
+          <li>비가시성 강화 영상 워터마크 삽입 방식 관련 특허 (등록)
+            <ul>
+              <li><a href="https://patents.google.com/patent/KR102679321B1">https://patents.google.com/patent/KR102679321B1</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="block divider footer">
+        본 문서는 경력기술서 버전으로 작성되었으며, 포트폴리오 상세 시각 자료는 별도 포트폴리오 문서로 분리 가능합니다.
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -45,6 +45,23 @@ body {
   box-shadow: 0 8px 18px rgba(30, 50, 85, 0.12);
 }
 
+.print-link {
+  position: fixed;
+  top: 20px;
+  left: 110px;
+  z-index: 10;
+  text-decoration: none;
+  color: #224985;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #c8d7f0;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.88rem;
+  box-shadow: 0 8px 18px rgba(30, 50, 85, 0.12);
+  font-family: inherit;
+  cursor: pointer;
+}
+
 .wrap {
   width: min(1120px, 92vw);
   margin: 34px auto 60px;
@@ -556,6 +573,13 @@ ul ul li::before {
     background: #fff;
     font-size: 11pt;
     line-height: 1.5;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .home-link,
+  .print-link {
+    display: none !important;
   }
 
   .wrap {
@@ -587,9 +611,86 @@ ul ul li::before {
   li::before {
     background: #97a4ba;
   }
+
+  .project-media,
+  .diagram-grid,
+  .diagram-card,
+  .compare-columns,
+  .flow-diagram,
+  .flow-diagram ol,
+  .architecture-diagram,
+  .arch-layout,
+  .arch-branches,
+  .arch-node {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  .diagram-card,
+  .architecture-diagram,
+  .flow-diagram li,
+  .compare-columns > div,
+  .arch-node,
+  .arch-root {
+    border-color: #b9c9e2;
+    background: #f7fbff;
+  }
+
+  .arch-svg path {
+    stroke: #8ea8d2;
+    stroke-width: 2.2;
+  }
+
+  .compare-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flow-diagram ol {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .flow-diagram li + li::after {
+    content: "→";
+    left: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .arch-branches {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 56px;
+    gap: 10px;
+  }
+
+  .arch-branches-five {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .arch-branches-seven {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .arch-branches-seven .arch-node {
+    padding: 6px 6px 7px;
+  }
+
+  .arch-branches-seven .arch-node-title {
+    font-size: 0.68rem;
+  }
+
+  .arch-branches-seven .arch-subnodes li {
+    font-size: 0.66rem;
+    padding: 4px 5px;
+  }
+
+  .arch-svg {
+    display: block;
+  }
 }
 
-@media (max-width: 760px) {
+@media screen and (max-width: 760px) {
   .wrap {
     margin-top: 22px;
   }
@@ -673,7 +774,3 @@ ul ul li::before {
     background: #9eb7e3;
   }
 }
-
-
-
-
