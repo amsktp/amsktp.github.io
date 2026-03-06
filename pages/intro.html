@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>자기소개서 | 이찬양</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/intro.css" />
+</head>
+<body>
+<a class="home-link" href="../index.html">메인으로</a>
+<section class="section about-section">
+  <div class="section-header">
+    <h2>About Me</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="about-grid">
+    <button class="about-card" type="button" data-target="intro-1">
+      <h3>Research -> Business</h3>
+      <p class="highlight">연구를 상용 제품과 매출로 연결</p>
+      <p>
+        비가시성 워터마크 연구를 실사용 가능한 B2B 솔루션으로 전환하고
+        제품군 확장까지 주도했습니다.
+      </p>
+      <span class="card-cta">자세히 보기</span>
+    </button>
+
+    <button class="about-card" type="button" data-target="intro-2">
+      <h3>Core Architecture</h3>
+      <p class="highlight">단일 C++ 코어 기반 멀티플랫폼 설계</p>
+      <p>
+        플랫폼별 중복 구현을 줄이고 코어 일관성을 유지하는 구조로
+        개발 생산성과 유지보수성을 높였습니다.
+      </p>
+      <span class="card-cta">자세히 보기</span>
+    </button>
+
+    <button class="about-card" type="button" data-target="intro-3">
+      <h3>Engineering Decisions</h3>
+      <p class="highlight">Trade-off를 근거로 선택</p>
+      <p>
+        보안성과 사용성, 성능과 운영성 사이에서
+        실제 도입 환경 기준으로 의사결정을 수행했습니다.
+      </p>
+      <span class="card-cta">자세히 보기</span>
+    </button>
+
+    <button class="about-card" type="button" data-target="intro-4">
+      <h3>Operations & Reliability</h3>
+      <p class="highlight">도입 이후 운영까지 설계</p>
+      <p>
+        라이선스, 검증 툴, 온프레미스 제약 대응, 자동화까지
+        운영 관점에서 안정적인 구조를 만들었습니다.
+      </p>
+      <span class="card-cta">자세히 보기</span>
+    </button>
+
+    <button class="about-card" type="button" data-target="intro-5">
+      <h3>Ownership & Handover</h3>
+      <p class="highlight">초기 개발부터 인수인계까지</p>
+      <p>
+        여러 솔루션의 최초 프로토타입을 구축하고
+        팀 확장을 고려한 인수인계 체계를 마련했습니다.
+      </p>
+      <span class="card-cta">자세히 보기</span>
+    </button>
+
+    <a class="about-card summary-card" href="./portfolio.html">
+      <h3>Portfolio</h3>
+      <p class="highlight">프로젝트 근거와 성과 확인</p>
+      <p>
+        문제 정의부터 구현, 운영 자동화까지 정리한
+        전체 포트폴리오로 이동합니다.
+      </p>
+      <span class="card-cta">포트폴리오 보러가기</span>
+    </a>
+  </div>
+
+  <section id="intro-1" class="detail-panel" aria-hidden="true">
+    <h3>Research -> Business</h3>
+    <p>저는 연구 성과를 실험실 지표로 끝내지 않고, 고객이 실제 사용하는 제품으로 전환하는 역할을 해왔습니다. 비가시성 워터마크 과제에서도 단순 알고리즘 개선이 아니라 도입 가능한 형태의 SDK, 검증, 운영 흐름까지 함께 설계했습니다. 결과적으로 연구 기술을 LabGuard 제품군으로 확장하며 상용 가치로 연결했습니다.</p>
+    <p>핵심은 기술 완성도와 사업 실현 가능성을 동시에 맞추는 것이었습니다. 저는 요구사항이 들어오면 기능 단위로 대응하기보다 제품 단위로 묶어 설계했고, 고객사 도입 관점에서 배포 가능성과 유지보수성을 먼저 점검했습니다. 그 접근으로 연구 -> SDK -> 상용 배포까지 이어지는 구조를 만들 수 있었습니다.</p>
+  </section>
+
+  <section id="intro-2" class="detail-panel" aria-hidden="true">
+    <h3>Core Architecture</h3>
+    <p>제 강점은 플랫폼을 늘리는 것보다 코어를 지키는 아키텍처 설계에 있습니다. 단일 C++ 코어를 중심으로 플랫폼별 입출력 계층만 분리해 Android, iOS, Web, Desktop에서 같은 알고리즘을 공유하도록 구성했습니다. 이 구조는 중복 구현과 디버깅 분산을 줄이고 품질 기준을 일관되게 유지하는 데 효과적이었습니다.</p>
+    <p>또한 OpenCV 의존성이 배포/운영 부담으로 누적되는 문제를 구조적으로 해결했습니다. 외부 의존성 제거와 내부 모듈 재구성으로 SDK 용량을 줄이고 배포 안정성을 확보했습니다. 결과적으로 기능 추가 속도와 유지보수 효율이 동시에 개선됐고, 팀이 플랫폼별로 따로 고생하는 패턴을 줄일 수 있었습니다.</p>
+  </section>
+
+  <section id="intro-3" class="detail-panel" aria-hidden="true">
+    <h3>Engineering Decisions</h3>
+    <p>저는 문제를 해결할 때 항상 대안 비교와 근거를 명시합니다. 예를 들어 RGB 기반 삽입의 한계를 확인한 뒤 Lab 색공간 전환을 선택해 비가시성과 강인성 균형을 개선했습니다. PDF 처리에서도 레스터화 방식은 제거 난이도는 높지만 용량/품질 저하가 커서 미채택했고, 사용성을 해치지 않는 방식으로 방향을 조정했습니다.</p>
+    <p>동영상 처리에서도 디코딩-재인코딩 전체 파이프라인 대신 ffmpeg filter 접근을 선택해 코덱 다양성과 메타데이터 보존 부담을 낮췄습니다. 이처럼 저는 성능만 최적화하는 것이 아니라, 고객 환경에서 실제로 유지 가능한 선택을 우선합니다. 결과적으로 기술 결정이 운영 리스크를 줄이고 도입 성공률을 높이는 방향으로 작동했습니다.</p>
+  </section>
+
+  <section id="intro-4" class="detail-panel" aria-hidden="true">
+    <h3>Operations & Reliability</h3>
+    <p>저는 제품의 완성 기준을 기능 구현이 아니라 운영 안정성까지로 봅니다. 실제 프로젝트에서는 삽입/검출 엔진뿐 아니라 고객 검증 툴, 라이선스 파일 구조, 권한 검증 방식까지 함께 설계했습니다. 특히 온프레미스/비통신 환경 제약이 있는 고객사를 위해 오프라인 권한 검증 구조를 구현해 도입 장벽을 낮췄습니다.</p>
+    <p>또한 Tracer 앱/PC 개발과 Manager 웹 개발을 통해 운영 과정의 휴먼에러와 반복 작업을 줄였습니다. 결과적으로 기술이 개발팀 내부에서만 닫히지 않고, 영업/운영/고객 환경 전체에서 실행 가능한 형태로 자리잡았습니다. 저는 앞으로도 운영 데이터를 기반으로 구조를 개선하는 엔지니어링을 지향합니다.</p>
+  </section>
+
+  <section id="intro-5" class="detail-panel" aria-hidden="true">
+    <h3>Ownership & Handover</h3>
+    <p>제 업무 스타일은 처음부터 끝까지 책임지는 방식에 가깝습니다. LabGuard 각 솔루션의 초기 프로토타입을 직접 구축하고, 이후 조직이 확장되면서 모바일/웹 담당자에게 안정적으로 인수인계할 수 있도록 구조와 문서를 정리했습니다. 개인 역량에 의존하지 않고 팀이 이어받을 수 있는 형태로 결과물을 남기는 것을 중요하게 생각합니다.</p>
+    <p>이 과정에서 저는 구현뿐 아니라 인터페이스 계약, 테스트 기준, 운영 가이드를 함께 마련했습니다. 덕분에 담당자가 바뀌어도 품질이 급격히 흔들리지 않았고, 팀 단위로 기능 확장 속도를 유지할 수 있었습니다. 다음 역할에서도 저는 초기 문제 정의부터 확장 가능한 팀 구조까지 함께 설계하는 엔지니어로 기여하겠습니다.</p>
+  </section>
+
+</section>
+<script src="../assets/js/intro.js"></script>
+</body>
+</html>

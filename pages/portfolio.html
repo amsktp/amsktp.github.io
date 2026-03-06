@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>포트폴리오 | 비가시성 워터마크 엔지니어</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/portfolio.css" />
+</head>
+<body>
+  <a class="home-link" href="../index.html">메인으로</a>
+  <main class="wrap">
+    <section class="panel intro-card">
+      <div class="hero">
+        <h1>비가시성 워터마크 연구부터 B2B 상용 솔루션 운영 자동화까지 End-to-End로 설계한 엔지니어</h1>
+        </div>
+      <div class="profile">
+        <img class="photo" src="../assets/images/profile.png" alt="프로필 사진" />
+        <div>
+          <div class="profile-top">
+            <h2>이찬양</h2>
+            <p class="role">Software Engineer / Watermarking</p>
+          </div>
+          <div class="profile-grid">
+            <div><strong>연락처</strong>010-2985-8992</div>
+            <div><strong>이메일</strong>yhutcnx@gmail.com</div>
+            <div><strong>학교</strong>동서울대학교 컴퓨터정보과 / 국가평생교육진흥원 컹퓨터공학</div>
+            <div><strong>학위</strong>학사</div>
+            <div><strong>자격증</strong>정보처리기사, SQLD, 컴퓨터활용능력 1급</div>
+            <div><strong>경력</strong>5년</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro-section">
+        <h2>핵심 요약</h2>
+        <ul>
+          <li>비가시성 워터마크 알고리즘 연구 및 상용화 주도</li>
+          <li>단일 C++ 코어 엔진 기반 멀티플랫폼 SDK 아키텍처 설계</li>
+          <li>촬영·캡쳐·저비트·특수 포맷 등 비정형 입력 대응</li>
+          <li>삽입 → 검출 → 고객 검증 툴 → 라이센스 → 운영 자동화까지 전체 흐름 설계</li>
+          <li>연구 기술을 실제 매출이 발생하는 B2B 솔루션으로 전환</li>
+        </ul>
+      </div>
+        <div class="chips">
+          <span class="chip">Invisible Watermark</span>
+          <span class="chip">C++</span>
+          <span class="chip">Kotlin</span>
+          <span class="chip">Swift</span>
+          <span class="chip">React</span>
+          <span class="chip">OpenCV</span>
+          <span class="chip">iOS / Android / Web / Desktop</span>
+          <span class="chip">LabGuard</span>
+          <span class="chip">운영 자동화</span>
+        </div>
+      </div>
+
+      <div class="intro-section">
+        <h2>경력</h2>
+        <article class="career-card">
+          <div class="career-head">
+            <h3>스냅태그 주식회사</h3>
+            <span class="career-period">2020년 10월 ~ 재직 중 (5년 5개월)</span>
+          </div>
+          <div class="career-grid">
+            <div><strong>직책</strong>정보보호팀 / 기술연구셀 / 대리</div>
+            <div><strong>담당업무</strong>비가시성 워터마크 코어 엔진 개발 및 멀티플랫폼 SDK 아키텍처 설계</div>
+          </div>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="panel print-page">
+      <div class="project-head">
+        <h2>프로젝트 1: 비가시성 워터마크 연구</h2>
+        <span class="project-meta">지속 과제 · 1 ~ 2명</span>
+      </div>
+      <figure class="project-media">
+
+        <div class="diagram-grid">
+          <article class="diagram-card flow-diagram">
+            <h3>검출 개념도</h3>
+            <ol>
+              <li>Input Image</li>
+              <li>Color Space Transform (RGB → Lab)</li>
+              <li>Payload Encoding</li>
+              <li>Adaptive Embedding</li>
+              <li>Output</li>
+            </ol>
+          </article>
+
+          <article class="diagram-card compare-diagram">
+            <h3>RGB vs Lab 삽입 차이</h3>
+            <div class="compare-columns">
+              <div>
+                <img src="../assets/images/project1-image.png" alt="프로젝트 1 관련 이미지" />
+                <strong>RGB 채널 삽입</strong>
+                <ul>
+                  <li>채널 간 간섭으로 색 번짐 위험</li>
+                  <li>밝기/채도 변화에서 노이즈 증가</li>
+                  <li>가시성 저하를 위한 강도 제한 필요</li>
+                </ul>
+              </div>
+              <div>
+                <strong>Lab 채널 삽입</strong>
+                <ul>
+                  <li>지각 기반 채널 분리로 왜곡 최소화</li>
+                  <li>촬영/압축 후에도 복원 안정성 우수</li>
+                  <li>강도 제어 범위가 넓어 튜닝 유연</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="diagram-card architecture-diagram">
+            <h3>아키텍처 다이어그램</h3>
+            <div class="arch-layout">
+              <div class="arch-root">C++ Core</div>
+              <svg class="arch-svg" viewBox="0 0 1000 180" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M500 6 V58" />
+                <path d="M170 58 H830" />
+                <path d="M170 58 V126" />
+                <path d="M500 58 V126" />
+                <path d="M830 58 V126" />
+              </svg>
+              <div class="arch-branches">
+                <div class="arch-node">
+                  <div class="arch-node-title">Desktop</div>
+                  <ul class="arch-subnodes">
+                    <li>Windows</li>
+                    <li>MacOS</li>
+                    <li>Linux</li>
+                  </ul>
+                </div>
+                <div class="arch-node">
+                  <div class="arch-node-title">Mobile</div>
+                  <ul class="arch-subnodes">
+                    <li>Android (JNI)</li>
+                    <li>iOS (Objc++)</li>
+                  </ul>
+                </div>
+                <div class="arch-node">
+                  <div class="arch-node-title">Web</div>
+                  <ul class="arch-subnodes">
+                    <li>WASM</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </figure>
+      <div class="block">
+        <strong>프로젝트 개요 (목적/역할)</strong>
+        <ul>
+          <li>촬영·캡쳐 환경에서도 높은 검출률을 유지하는 비가시성 워터마크 알고리즘 연구 및 실험 환경 구축</li>
+          <li>기존 프로토타입 기반 워터마크 알고리즘을 상용 수준으로 재설계</li>
+          <li>비가시성 향상, 촬영 환경 검출 안정성 개선, 페이로드 복원율 개선</li>
+          <li>알고리즘 실험 환경 및 멀티 플랫폼 테스트 구조 설계·구현</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>문제 정의 (Problem)</strong>
+        <ul>
+          <li>기존 워터마크는 비가시성과 검출 안정성이 동시에 낮아 상용화에 한계</li>
+          <li>데스크톱 중심 구조로 모바일·웹 환경 검증이 어려움</li>
+          <li>팩스, 2Bit, CMYK 등 저비트·특수 포맷에서 삽입 자체가 불안정</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>접근 방식 (Approach)</strong>
+        <ul>
+          <li>워터마크 삽입 및 검출을 공통 엔진 구조로 설계하고 플랫폼별 입출력만 분리</li>
+          <li>모바일 환경 기반 검출 실험을 위한 파라미터 조정 앱 개발</li>
+          <li>카메라를 통한 프레임 내 워터마크 검출, 이미지 검출 수행</li>
+          <li>잉여 워터마크 영역 활용 추가 페이로드 삽입 구조 설계 (144bit x 3)</li>
+          <li>암막 상자, 고정 조명, 디바이스 위치 고정 장치를 활용한 재현 가능한 실험 환경 구축</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>구현 내용 (Implementation)</strong>
+        <ul>
+          <li>멀티 플랫폼 테스트 프레임워크 구축
+            <ul>
+              <li>Desktop: Windows / macOS / Linux (Docker)</li>
+              <li>Mobile: iOS / Android (카메라 프레임 기반 검출)</li>
+              <li>Web: 브라우저 환경 삽입·검출 테스트</li>
+            </ul>
+          </li>
+          <li>주파수 필터 기반 워터마크 성분 추출 및 삽입 강도 조정 로직 개선</li>
+          <li>디코딩 단계 검출 방식 개선</li>
+          <li>워터마크 모양, 데이터 삽입 색 채널, 삽입 방식 실험</li>
+          <li>RGB 기반 삽입 한계 분석 후 Lab 색 공간 기반 삽입 방식 전환
+            <ul>
+              <li>HVS 특성 고려</li>
+              <li>L/a/b 채널 비교</li>
+            </ul>
+          </li>
+          <li>확대/회전 판단 알고리즘 개선으로 검출 파이프라인 리소스 최적화</li>
+          <li>팩스 및 2Bit 영상 환경 대응 저비트 영상용 워터마크 삽입 방식 개발</li>
+          <li>워터마크 인식률 측정 객관 지표 제작 및 지표 저장 DB/백엔드/웹 개발</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>성과 및 결과 (Result)</strong>
+        <ul>
+          <li>동일 조건 테스트 환경에서 기존 대비 검출 성공률 유의미하게 개선</li>
+          <li>Windows 한정 디버깅 환경에서 iOS, Android, Web, Linux, MacOS, Windows 지원으로 확장</li>
+          <li>Android, iOS, Windows 별도 소스 관리 환경에서 단일 소스로 프로젝트 간 차이 제거</li>
+          <li>불필요한 연산 제거로 검출 알고리즘 리소스 사용량 감소</li>
+          <li>특허 등록 2건: 팩스/2Bit 영상 워터마크 삽입 방식, 비가시성 강화 영상 워터마크 삽입 방식</li>
+            <ul>
+                <li><a href="https://patents.google.com/patent/KR20250169131A">2Bit 영상 워터마크 삽입 방식 관련 특허 (출원)</a></li>
+                <ul>
+                  <li>https://patents.google.com/patent/KR20250169131A</li>
+                </ul>
+                <li><a href="https://patents.google.com/patent/KR102679321B1">비가시성 강화 영상 워터마크 삽입 방식 관련 특허 (등록)</a></li>
+                <ul>
+                  <li>https://patents.google.com/patent/KR102679321B1</li>
+                </ul>
+            </ul>
+          <li>비가시성과 강인성(robustness) Trade-off 기준 반복 실험으로 삽입 강도 및 패턴 구조 최적화</li>
+          <li>비가시성 워터마크 기술이 사내 주력 솔루션(LabGuard) 핵심 기술로 확장</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>내가 기여한 핵심 포인트 (My Contribution)</strong>
+        <ul>
+          <li>비가시성 워터마크 알고리즘 코어 로직과 실험 환경 단독 주도</li>
+          <li>단일 C++ 코어 엔진 유지를 위해 JNI/Objective-C++ 브릿지 구성, 플랫폼 종속 로직과 알고리즘 코어 분리</li>
+          <li>비가시성 워터마크 삽입 및 검출 알고리즘 설계</li>
+          <li>멀티 플랫폼 테스트 구조 초기 설계 및 구현</li>
+          <li>모바일 카메라 기반 검증 환경 직접 개발</li>
+          <li>특수 포맷(팩스, 2Bit 영상) 대응 워터마크 방식 연구 및 구현</li>
+        </ul>
+      </div>
+      <div class="block divider">
+        <strong>기술 스택</strong>
+        <ul>
+          <li>Language: C++</li>
+          <li>Platform: Windows, macOS, Linux, iOS, Android, Web</li>
+          <li>Mobile
+            <ul>
+              <li>Android (Kotlin, JNI)</li>
+              <li>iOS (Swift, Objective-C)</li>
+              <li>Camera / Frame 기반 처리</li>
+            </ul>
+          </li>
+          <li>Web: WASM</li>
+          <li>Graphics / Media: OpenGL, 영상 처리 관련 라이브러리</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel print-page">
+      <div class="project-head">
+        <h2>프로젝트 2: 비가시성 워터마크의 확장</h2>
+        <span class="project-meta">지속 과제 · 1 ~ 2명</span>
+      </div>
+      <div class="block">
+        <strong>프로젝트 개요 (목적/역할)</strong>
+        <ul>
+          <li>비가시성 워터마크 기술을 활용하여 다양한 멀티미디어에 적용</li>
+          <li>플랫폼 별 이미지, 비디오, PDF 등 다양한 멀티미디어 워터마크 적용 검토</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>문제 정의 (Problem)</strong>
+        <ul>
+          <li>이미지뿐 아니라 동영상, PDF 등 다양한 대상물에 워터마크 적용 니즈 확인</li>
+          <li>이미지의 DPI, Color Profile 등 다양한 옵션 적용 필요</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>접근 방식 (Approach)</strong>
+        <ul>
+          <li>고객사 니즈에 따라 다양한 대상물에 비가시성 워터마크 삽입/검출 개발</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>구현 내용 (Implementation)</strong>
+        <ul>
+          <li>동영상
+            <ul>
+              <li>FFMPEG 디코딩→프레임 삽입→재인코딩 방식 검토</li>
+              <li>FFMPEG CLI Filter 기반 비가시성 워터마크 삽입/검출 채택</li>
+              <li>코덱 다양성, 메타데이터 보존 고려</li>
+            </ul>
+          </li>
+          <li>이미지
+            <ul>
+              <li>magick++로 CMYK 채널 지원</li>
+              <li>DPI/프로파일 옵션 적용</li>
+            </ul>
+          </li>
+          <li>PDF
+            <ul>
+              <li>레스터화 방식 실험 (제거 난이도↑, 용량 증가/품질 저하 발생)</li>
+              <li>레이어 기반 삽입으로 전환 (용량 증가 최소화, 편집 제한 정책 보완)</li>
+            </ul>
+          </li>
+          <li>화면(Windows): MFC를 이용해 화면에 워터마크 삽입</li>
+          <li>출력물(Windows): DLL Injection으로 프린트 함수 후킹 후 인쇄 시 워터마크 삽입</li>
+          <li>팩스: 2Bit 이미지 워터마크 삽입</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>성과 및 결과 (Result)</strong>
+        <ul>
+          <li>사내 주력 사업인 랩가드 솔루션으로 발전</li>
+          <li>사내 포토카드 사업으로 발전</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>내가 기여한 핵심 포인트 (My Contribution)</strong>
+        <ul>
+          <li>각 멀티미디어 워터마크 삽입 검토</li>
+          <li>기능 별 라이브러리화를 진행하여 배포 및 재사용 가능하도록 개발</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>기술적 고민과 의사결정 사례</strong>
+        <ul>
+          <li>PDF 레스터화 미채택 이유
+            <ul>
+              <li>보안도 중요하지만 우선 사용성 문제가 없어야 함</li>
+              <li>용량 증가 억제를 우선 판단</li>
+            </ul>
+          </li>
+          <li>FFMPEG CLI Filter 선택 이유
+            <ul>
+              <li>디코딩→인코딩 전체 처리 시 코덱 다양성 처리 부담 존재</li>
+              <li>메타데이터 보존/처리 부담이 커 Filter 전략 채택</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="block divider">
+        <strong>기술 스택</strong>
+        <ul>
+          <li>Language: C++</li>
+          <li>Platform: Windows, macOS, Linux, iOS, Android, Web</li>
+          <li>Video
+            <ul>
+              <li>Android(OpenGL)</li>
+              <li>iOS( TODO )</li>
+              <li>Web(ffmpeg)</li>
+              <li>Desktop(ffmpeg)</li>
+            </ul>
+          </li>
+          <li>Image
+            <ul>
+              <li>Desktop(magick++)</li>
+            </ul>
+          </li>
+          <li>PDF
+            <ul>
+              <li>Desktop(podofo, mupdf)</li>
+            </ul>
+          </li>
+          <li>화면: MFC</li>
+          <li>출력물: MFC</li>
+          <li>팩스: Desktop(Magick++)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel print-page">
+      <div class="project-head">
+        <h2>프로젝트 3: 랩가드 솔루션</h2>
+        <span class="project-meta">지속 과제 · 4 ~ 6명 · SDK</span>
+      </div>
+      <figure class="project-media">
+        <article class="diagram-card architecture-diagram">
+          <h3>아키텍처 다이어그램</h3>
+          <div class="arch-layout">
+            <div class="arch-root">C++ Core</div>
+            <svg class="arch-svg arch-svg-seven" viewBox="0 0 1000 180" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M500 6 V56" />
+              <path d="M60 56 H940" />
+              <path d="M60 56 V126" />
+              <path d="M206 56 V126" />
+              <path d="M353 56 V126" />
+              <path d="M500 56 V126" />
+              <path d="M647 56 V126" />
+              <path d="M794 56 V126" />
+              <path d="M940 56 V126" />
+            </svg>
+            <div class="arch-branches arch-branches-seven">
+              <div class="arch-node">
+                <div class="arch-node-title">LabGuard-S</div>
+                <ul class="arch-subnodes">
+                  <li>Windows</li>
+                </ul>
+              </div>
+              <div class="arch-node">
+                <div class="arch-node-title">LabGuard-P</div>
+                <ul class="arch-subnodes">
+                  <li>Windows</li>
+                </ul>
+              </div>
+              <div class="arch-node">
+                <div class="arch-node-title">LabGuard-M</div>
+                <ul class="arch-subnodes">
+                  <li>JNI / Obj-C</li>
+                </ul>
+              </div>
+              <div class="arch-node">
+                <div class="arch-node-title">LabGuard-W</div>
+                <ul class="arch-subnodes">
+                  <li>WASM</li>
+                </ul>
+              </div>
+              <div class="arch-node">
+                <div class="arch-node-title">LabGuard-F (Video)</div>
+                <ul class="arch-subnodes">
+                  <li>+ ffmpeg</li>
+                </ul>
+              </div>
+              <div class="arch-node">
+                <div class="arch-node-title">LabGuard-F (Image)</div>
+                <ul class="arch-subnodes">
+                  <li>+ magick++</li>
+                </ul>
+              </div>
+              <div class="arch-node">
+                <div class="arch-node-title">LabGuard-F (PDF)</div>
+                <ul class="arch-subnodes">
+                  <li>+ podofo / mupdf</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <figcaption>프로젝트 3 이미지 (파일명: project3-image.jpg)</figcaption>
+      </figure>
+
+      <div class="block">
+        <strong>프로젝트 개요 (목적/역할)</strong>
+        <ul>
+          <li>워터마크 적용 대상물 유출 시 유출본에서 워터마크 검출로 유출자 특정하는 B2B 솔루션 개발</li>
+          <li>LabGuard 전 제품군 초기 프로토타입 개발</li>
+          <li>공통 코어 기반 SDK 아키텍처 설계 및 플랫폼별 담당자 기술 인수인계</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>문제 정의 (Problem)</strong>
+        <ul>
+          <li>니즈 파악 및 검토 완료 후 각 분야별 솔루션 정의 필요</li>
+          <li>실사용 가능 형태의 SDK화 및 전달 필요</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>접근 방식 (Approach)</strong>
+        <ul>
+          <li>고객사/파트너사가 실제 사용할 수 있는 SDK 형태로 제작 및 배포</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>구현 내용 (Implementation)</strong>
+        <ul>
+          <li>LabGuard-S
+            <ul>
+              <li>Windows/MacOS 화면 워터마크 솔루션</li>
+              <li>파트너 보안 에이전트 연동</li>
+            </ul>
+          </li>
+          <li>LabGuard-P
+            <ul>
+              <li>Windows 화면 워터마크 솔루션</li>
+              <li>파트너 보안 에이전트 연동</li>
+            </ul>
+          </li>
+          <li>LabGuard-M
+            <ul>
+              <li>고객사 앱 내 Mobile 워터마크 출력 SDK</li>
+              <li>Android SDK 개발 후 모바일 팀 인수인계</li>
+            </ul>
+          </li>
+          <li>LabGuard-W
+            <ul>
+              <li>고객사 웹 내 Web 워터마크 출력 SDK</li>
+              <li>Web SDK 개발 후 프론트엔드 담당자 인수인계</li>
+            </ul>
+          </li>
+          <li>LabGuard-F
+            <ul>
+              <li>이미지/동영상/PDF 워터마크 출력 솔루션</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>성과 및 결과 (Result)</strong>
+        <ul>
+          <li>대기업 계열사 및 국가기관 도입</li>
+          <li>연구 → SDK → 상용 배포까지 전환 성공</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>내가 기여한 핵심 포인트 (My Contribution)</strong>
+        <ul>
+          <li>모든 솔루션 최초 프로토타입 개발</li>
+          <li>M과 W는 이후 각 담당자에게 인수인계</li>
+        </ul>
+      </div>
+      <div class="block divider">
+        <strong>기술 스택</strong>
+        <ul>
+          <li>Language: C++</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel print-page">
+      <div class="project-head">
+        <h2>프로젝트 4: 랩가드 솔루션의 확장 1 - License</h2>
+        <span class="project-meta">지속 과제</span>
+      </div>
+      <div class="block">
+        <strong>프로젝트 개요 (목적/역할)</strong>
+        <ul>
+          <li>랩가드 솔루션 이용 권한을 담는 라이센스 파일 설계</li>
+          <li>라이센스 내부 구조 설계</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>문제 정의 (Problem)</strong>
+        <ul>
+          <li>다수 고객사 내부망 환경으로 서버 통신 기반 권한 체크 제약</li>
+          <li>On-premise 서버 설치 또한 인력/경험 측면 제약</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>접근 방식 (Approach)</strong>
+        <ul>
+          <li>오프라인 환경 동작 가능한 권한 검증 구조 설계</li>
+          <li>라이센스 파일 위변조 방지 암호화 및 무결성 검증 로직 설계</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>구현 내용 (Implementation)</strong>
+        <ul>
+          <li>라이브러리 사용 권한 암호화
+            <ul>
+              <li>필수: 사용 기한, 고객사 분류 코드, 키 개수, 솔루션별 사용 권한</li>
+              <li>기타: 생성/업데이트 날짜, 고객사 명 등</li>
+            </ul>
+          </li>
+          <li>트레이서 사용 권한 암호화
+            <ul>
+              <li>필수: 사용 기한, 검출 코드, 2차 검증 ID/PW</li>
+              <li>기타: 생성/업데이트 날짜, 고객사 명 등</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>성과 및 결과 (Result)</strong>
+        <ul>
+          <li>라이브러리/트레이서 사용 권한 체크와 고객사 요구사항 동시 충족</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>내가 기여한 핵심 포인트 (My Contribution)</strong>
+        <ul>
+          <li>비통신 환경 권한 체크 문제 기획</li>
+          <li>라이센스 파일 내부 구조 설계</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel print-page">
+      <div class="project-head">
+        <h2>프로젝트 5: 랩가드 솔루션의 확장 2 - Tracer</h2>
+        <span class="project-meta">지속 과제</span>
+      </div>
+
+      <div class="block">
+        <strong>프로젝트 개요 (목적/역할)</strong>
+        <ul>
+          <li>랩가드 솔루션 이용 시 영상에서 워터마크 검출을 위한 애플리케이션 개발</li>
+          <li>AOS 초반 개발, 윈도우 데스크톱 앱 개발</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>문제 정의 (Problem)</strong>
+        <ul>
+          <li>유출본을 외부 전달 없이 고객사 내부에서 검출하려는 니즈 다수 발생</li>
+          <li>도입 고객사가 직접 워터마크 검출 가능한 환경 필요</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>접근 방식 (Approach)</strong>
+        <ul>
+          <li>고객사 니즈 기반으로 다양한 요구를 공통적으로 해결 가능한 구조 설계/개발</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>구현 내용 (Implementation)</strong>
+        <ul>
+          <li>Tracer App
+            <ul>
+              <li>Android 카메라 기반 프레임 내 워터마크 검출 앱</li>
+              <li>프로토타입 개발 이후 모바일 담당자 인수인계</li>
+              <li>기술 스택: Kotlin, C++, JNI</li>
+            </ul>
+          </li>
+          <li>Tracer PC
+            <ul>
+              <li>Windows 데스크톱에서 이미지/동영상/PDF 다중 파일 단위 검출 앱</li>
+              <li>검출 + 단일 이미지 간단 편집 기능 제공</li>
+              <li>현장 사용성 고려 ROI 조정 및 로그 저장 기능 제공</li>
+              <li>기술 스택: C++, C++ QT</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>성과 및 결과 (Result)</strong>
+        <ul>
+          <li>워터마크 삽입부터 검출까지 고객사 관점의 하나의 프로젝트 흐름 설계 및 개발</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>내가 기여한 핵심 포인트 (My Contribution)</strong>
+        <ul>
+          <li>Android 프로토타입 앱 개발</li>
+          <li>윈도우 데스크톱용 응용 프로그램 개발</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel print-page">
+      <div class="project-head">
+        <h2>프로젝트 6: 랩가드 솔루션의 확장 3 - 랩가드 매니져</h2>
+        <span class="project-meta">25년 12월 ~ 지속 과제</span>
+      </div>
+      <div class="block">
+        <strong>프로젝트 개요 (목적/역할)</strong>
+        <ul>
+          <li>랩가드 솔루션 관리 웹으로 휴먼에러 최소화</li>
+          <li>소수 인원으로 랩가드 솔루션 A to Z 자동화</li>
+          <li>웹 개발, 백엔드 일부 개발</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>문제 정의 (Problem)</strong>
+        <ul>
+          <li>영업 엑셀 문서 기반 요청 → 타 팀 백엔드의 수동 DB 입력 플로우에서 휴먼에러 위험</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>접근 방식 (Approach)</strong>
+        <ul>
+          <li>실사용자 관점 1차 기획/개발</li>
+          <li>Dev 환경 사용 테스트 및 피드백 수령 후 2차 개발</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>구현 내용 (Implementation)</strong>
+        <ul>
+          <li>프로젝트 설계 및 API 설계</li>
+          <li>웹 개발</li>
+          <li>일부 백엔드 개발
+            <ul>
+              <li>웹 CRUD</li>
+              <li>라이센스</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>성과 및 결과 (Result)</strong>
+        <ul>
+          <li>실사용자와 데이터 차이 감소로 솔루션 관리 용이성 개선</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>내가 기여한 핵심 포인트 (My Contribution)</strong>
+        <ul>
+          <li>웹</li>
+          <li>백엔드
+            <ul>
+              <li>계정 API/DB 구축</li>
+              <li>라이센스 파일 API/DB 구축</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="block divider">
+        <strong>기술 스택</strong>
+        <ul>
+          <li>React.js (TypeScript)</li>
+          <li>Nest.js (TypeScript, Wasm)</li>
+        </ul>
+      </div>
+      <div class="block">
+        <strong>기술적 고민과 의사결정 사례</strong>
+        <ul>
+          <li>조직 구조 변경에 따라 일부 기능은 독립적으로 운영 가능한 백엔드 구조로 재설계</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

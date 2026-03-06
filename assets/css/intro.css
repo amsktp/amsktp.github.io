@@ -1,0 +1,198 @@
+:root {
+  --bg: #0f1115;
+  --panel: #171a21;
+  --panel-2: #1b1f28;
+  --line: #2a2f3a;
+  --text: #e6e8ee;
+  --muted: #b7bcc9;
+  --accent: #4da3ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(900px 420px at 4% 10%, rgba(77, 163, 255, 0.12), transparent 65%), var(--bg);
+  color: var(--text);
+  font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+.home-link {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 20;
+  text-decoration: none;
+  color: #dce8ff;
+  background: rgba(77, 163, 255, 0.16);
+  border: 1px solid rgba(77, 163, 255, 0.36);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.88rem;
+}
+
+.section {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 100px 22px 70px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  margin-top: 12px;
+}
+
+.about-grid {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 18px;
+  row-gap: 22px;
+}
+
+.about-card {
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  appearance: none;
+  text-decoration: none;
+  background: linear-gradient(180deg, var(--panel), #141820);
+  padding: 24px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  color: var(--text);
+}
+
+.about-card:hover,
+.about-card.is-active {
+  border-color: rgba(77, 163, 255, 0.62);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+}
+
+.about-card h3 {
+  margin: 0 0 12px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.highlight {
+  color: var(--accent);
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+.about-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.66;
+  color: var(--muted);
+}
+
+.card-cta {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #d3e7ff;
+}
+
+.summary-card {
+  background:
+    radial-gradient(440px 220px at 14% 22%, rgba(77, 163, 255, 0.22), transparent 72%),
+    radial-gradient(420px 210px at 88% 80%, rgba(140, 193, 255, 0.16), transparent 76%),
+    linear-gradient(120deg, #1d2940, #162033 52%, #121926);
+  border-color: rgba(120, 183, 255, 0.5);
+}
+
+.summary-card:hover,
+.summary-card.is-active {
+  border-color: rgba(148, 203, 255, 0.78);
+  box-shadow: 0 20px 34px rgba(7, 15, 31, 0.48);
+}
+
+.summary-card h3 {
+  font-size: 22px;
+  letter-spacing: 0.01em;
+}
+
+.summary-card .highlight {
+  color: #b7dcff;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.detail-panel {
+  margin-top: 0;
+  padding: 0 26px;
+  border-radius: 14px;
+  border: 0 solid #2c3342;
+  background: linear-gradient(180deg, var(--panel-2), #151921);
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: max-height 0.75s ease, opacity 0.45s ease, transform 0.45s ease, padding 0.45s ease, margin-top 0.35s ease, border-width 0.2s ease;
+}
+
+.detail-panel.is-open {
+  margin-top: 16px;
+  max-height: 1200px;
+  opacity: 1;
+  transform: translateY(0);
+  padding: 24px 26px;
+  border-width: 1px;
+}
+
+.detail-panel h3 {
+  margin: 0 0 10px;
+  color: #dce8ff;
+  font-size: 22px;
+}
+
+.detail-panel p {
+  margin: 0 0 12px;
+  font-size: 15px;
+  line-height: 1.78;
+  color: #c7cdde;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .section {
+    padding-top: 88px;
+  }
+
+  .about-card {
+    padding: 24px;
+  }
+
+  .detail-panel.is-open {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .summary-card h3 {
+    font-size: 18px;
+  }
+}

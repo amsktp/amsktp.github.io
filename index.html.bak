@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ChanYang Lee - Portfolio</title>
+
+<style>
+@page {
+    size: A4;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f5f5f5;
+}
+
+.page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 24mm 20mm;
+    margin: auto;
+    background: white;
+    box-sizing: border-box;
+}
+
+/* Typography */
+h1 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 40px 0 16px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 6px;
+}
+
+h3 {
+    font-size: 15px;
+    margin: 0 0 4px 0;
+    font-weight: 600;
+}
+
+p, li {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+}
+
+small {
+    font-size: 11px;
+    color: #777;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.meta {
+    text-align: right;
+}
+
+.section {
+    margin-top: 32px;
+}
+
+.project {
+    margin-bottom: 24px;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    padding-left: 18px;
+    margin-top: 6px;
+}
+
+.highlight {
+    font-weight: 600;
+}
+
+.tech {
+    font-size: 11px;
+    color: #555;
+    margin-top: 4px;
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<!-- HEADER -->
+<div class="header">
+    <div>
+        <h1>ChanYang Lee</h1>
+        <p class="highlight">Software Engineer | Image Processing | Watermarking</p>
+    </div>
+    <div class="meta">
+        <small>Seoul, Korea</small><br/>
+        <small>email@example.com</small><br/>
+        <small>github.com/yourrepo</small>
+    </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="section">
+    <h2>Summary</h2>
+    <p>
+        이미지 워터마킹 및 HVS 기반 색 공간 최적화를 수행하며,
+        디코딩 검출률 개선과 비가시성 향상에 집중한 엔지니어.
+        C++ 기반 코어 엔진 개발과 JNI / Objective-C++ 브릿지 설계를 통해
+        멀티플랫폼 상용화 경험 보유.
+    </p>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="section">
+    <h2>Experience</h2>
+
+    <div class="project">
+        <div class="project-header">
+            <h3>LabGuard Watermark Engine</h3>
+            <small>20XX - Present</small>
+        </div>
+
+        <p class="tech">C++ / JNI / Objective-C++ / WASM</p>
+
+        <ul>
+            <li>HVS 기반 RGB → Lab 채널 변경으로 비가시성 개선</li>
+            <li>워터마크 삽입 위치 및 방식 최적화 실험 설계</li>
+            <li>디코딩 알고리즘 개선으로 페이로드 검출률 향상</li>
+            <li>WASM export 구조 설계 및 ABI 안정성 유지 전략 적용</li>
+            <li>JNI / Objective-C++ 브릿지 구조 설계</li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- TECHNICAL SKILLS -->
+<div class="section">
+    <h2>Technical Skills</h2>
+    <p><span class="highlight">Languages:</span> C++, Python, Java</p>
+    <p><span class="highlight">Domain:</span> Image Processing, Watermarking, HVS 기반 최적화</p>
+    <p><span class="highlight">Platform:</span> Android (JNI), iOS (Obj-C++), WebAssembly</p>
+</div>
+
+<!-- ARCHITECTURE & LEADERSHIP -->
+<div class="section">
+    <h2>Engineering Leadership</h2>
+    <ul>
+        <li>워터마킹 실패 프로젝트 분석 후 구조 재설계</li>
+        <li>디코딩 검출률 개선을 위한 실험 지표 수립</li>
+        <li>멀티플랫폼 배포를 위한 코어/브릿지 레이어 분리 설계</li>
+    </ul>
+</div>
+
+</div>
+</body>
+</html>
