@@ -20,6 +20,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "IBM Plex Sans KR", sans-serif;
@@ -60,6 +64,35 @@ body {
   box-shadow: 0 8px 18px rgba(30, 50, 85, 0.12);
   font-family: inherit;
   cursor: pointer;
+}
+
+.toc {
+  display: none;
+}
+
+.toc-title {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.88rem;
+  letter-spacing: 0.12em;
+  color: #5d7191;
+}
+
+.toc a {
+  display: block;
+  padding: 9px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #2a3f62;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.toc a:hover {
+  background: #eef4ff;
+  color: #1f4f9b;
+  transform: translateX(2px);
 }
 
 .wrap {
@@ -243,6 +276,7 @@ h3 {
 
 .project-head h2 {
   margin: 0;
+  font-size: 25px;
 }
 
 .project-meta {
@@ -574,203 +608,258 @@ ul ul li::before {
   page-break-inside: avoid;
 }
 
+@media screen and (min-width: 1360px) {
+  .toc {
+    display: block;
+    position: fixed;
+    top: 84px;
+    left: 20px;
+    z-index: 9;
+    width: 240px;
+    max-height: calc(100vh - 108px);
+    overflow-y: auto;
+    padding: 14px;
+    border: 1px solid #d4ddec;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 24px rgba(31, 43, 68, 0.08);
+    backdrop-filter: blur(8px);
+  }
+
+  .wrap {
+    width: min(1120px, calc(100vw - 340px));
+    margin: 34px 24px 60px 300px;
+  }
+
+  .panel {
+    scroll-margin-top: 24px;
+  }
+}
+
 @media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
   html {
     font-size: 14px;
   }
 
   body {
     background: #fff;
-    font-size: 9.5pt;
-    line-height: 1.42;
+    color: #1c2431;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    font-size: 9.5pt;
+    line-height: 1.42;
   }
 
   .home-link,
-  .print-link {
+  .print-link,
+  .toc,
+  .about-grid,
+  .card-cta {
     display: none !important;
   }
 
-  .wrap {
+  .section {
     width: 100%;
     margin: 0;
-    gap: 8mm;
+    padding: 0;
   }
 
-  .panel {
-    box-shadow: none;
+  .section-header {
+    display: none !important;
+  }
+
+  .panel.intro-card {
+    display: grid;
+    gap: 0;
     border: 1px solid #cfd8e5;
+    background: #fff;
     border-radius: 0;
+    box-shadow: none;
     padding: 7mm;
+    margin-bottom: 4mm;
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  .hero h1 {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    font-size: 15.5pt;
+    line-height: 1.3;
+    color: #1e2632;
+  }
+
+  .profile {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 18px;
+    align-items: start;
   }
 
   .photo {
     width: 110px;
     height: 150px;
-  }
-
-  .hero h1 {
-    font-size: 15.5pt;
-    line-height: 1.3;
+    border: 1px solid #d7dfeb;
+    border-radius: 14px;
+    object-fit: cover;
+    background: #eef3fb;
   }
 
   .profile-top h2 {
+    margin: 0;
     font-size: 13pt;
+    color: #1e2632;
+    white-space: nowrap;
   }
 
-  .role,
-  .profile-grid,
-  .career-grid,
-  .block,
-  li {
+  .role {
+    color: #5f6e84;
     font-size: 9pt;
+    margin: 0;
+    white-space: nowrap;
   }
 
-  h2,
-  .project-head h2,
+  .profile-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+
+  .profile-grid {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px 18px;
+    font-size: 9pt;
+    color: #24334a;
+  }
+
+  .profile-grid strong {
+    color: #2a3f62;
+    margin-right: 6px;
+  }
+
+  .intro-section {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #d7dfeb;
+  }
+
   .intro-section h2 {
+    margin: 0 0 10px;
     font-size: 10pt;
+    color: #1e2632;
   }
 
-  h3,
-  .career-head h3,
-  .diagram-card h3 {
+  .career-card {
+    margin-top: 10px;
+    border: 1px solid #d7dfeb;
+    border-radius: 12px;
+    padding: 14px;
+    background: linear-gradient(180deg, #ffffff, #fbfcff);
+  }
+
+  .career-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #d7dfeb;
+  }
+
+  .career-head h3 {
+    margin: 0;
     font-size: 9.75pt;
+    color: #1e2632;
   }
 
-  .career-period,
-  .project-meta,
-  .meta,
-  .project-media figcaption,
-  .footer {
+  .career-period {
+    color: #5f6e84;
     font-size: 8.5pt;
   }
 
-  .chip {
-    font-size: 8.25pt;
+  .career-grid {
+    margin-top: 10px;
+    display: grid;
+    gap: 8px;
+    font-size: 9pt;
+    color: #24334a;
   }
 
-  .block strong {
-    font-size: 9.1pt;
+  .career-grid strong {
+    display: inline-block;
+    min-width: 64px;
+    margin-right: 8px;
+    color: #24344d;
+  }
+
+  .intro-section li {
+    margin: 5px 0;
+    font-size: 9pt;
+    line-height: 1.5;
+  }
+
+  .chips {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
   }
 
   .chip {
     border: 1px solid #c8d7f0;
     background: #fff;
-  }
-
-  .footer {
-    margin-top: 4mm;
-  }
-
-  .project-media img {
-    max-height: 85mm;
-  }
-
-  .print-page {
-    break-before: auto;
-    page-break-before: auto;
-  }
-
-  .flow-diagram li {
-    font-size: 8.25pt;
-    line-height: 1.3;
-  }
-
-  .compare-columns strong,
-  .arch-root,
-  .arch-node-title {
+    color: #23498b;
+    border-radius: 999px;
+    padding: 5px 11px;
     font-size: 8.25pt;
   }
 
-  .compare-columns li,
-  .arch-node,
-  .arch-subnodes li {
-    font-size: 7.8pt;
-    line-height: 1.35;
-  }
-
-  li::before {
-    background: #97a4ba;
-  }
-
-  .project-media,
-  .diagram-grid,
-  .diagram-card,
-  .compare-columns,
-  .flow-diagram,
-  .flow-diagram ol,
-  .architecture-diagram,
-  .arch-layout,
-  .arch-branches,
-  .arch-node {
+  .detail-panel,
+  .detail-panel.is-open {
+    margin-top: 16px;
+    padding: 24px 26px !important;
+    max-height: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    overflow: visible !important;
+    border: 1px solid #cfd8e6;
+    border-radius: 14px;
+    background: #fff;
     break-inside: avoid-page;
     page-break-inside: avoid;
   }
 
-  .diagram-card,
-  .architecture-diagram,
-  .flow-diagram li,
-  .compare-columns > div,
-  .arch-node,
-  .arch-root {
-    border-color: #b9c9e2;
-    background: #f7fbff;
+  .detail-panel h3 {
+    color: #1f3f73;
+    font-size: 13pt;
+    margin-bottom: 10px;
   }
 
-  .arch-svg path {
-    stroke: #8ea8d2;
-    stroke-width: 2.2;
+  .detail-panel p {
+    color: #24334a;
+    font-size: 9pt;
+    line-height: 1.58;
+    margin-bottom: 12px;
+    text-align: justify;
   }
 
-  .compare-columns {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .project-head h2 {
+    margin: 0;
+    font-size: 15px;
   }
 
-  .flow-diagram ol {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 18px;
-  }
-
-  .flow-diagram li + li::after {
-    content: "→";
-    left: -18px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .arch-branches {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    margin-top: 56px;
-    gap: 10px;
-  }
-
-  .arch-branches-five {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
-  .arch-branches-seven {
-    grid-template-columns: repeat(7, minmax(0, 1fr));
-    gap: 6px;
-  }
-
-  .arch-branches-seven .arch-node {
-    padding: 6px 6px 7px;
-  }
-
-  .arch-branches-seven .arch-node-title {
-    font-size: 0.68rem;
-  }
-
-  .arch-branches-seven .arch-subnodes li {
-    font-size: 0.66rem;
-    padding: 4px 5px;
-  }
-
-  .arch-svg {
-    display: block;
-  }
 }
 
 @media screen and (max-width: 760px) {
