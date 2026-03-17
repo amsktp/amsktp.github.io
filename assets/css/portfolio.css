@@ -1,6 +1,6 @@
 @page {
   size: A4;
-  margin: 12mm;
+  margin: 10mm;
 }
 
 :root {
@@ -86,7 +86,7 @@ body {
 
 .photo {
   width: 130px;
-  height: 130px;
+  height: 180px;
   border-radius: 14px;
   border: 1px solid var(--line);
   object-fit: cover;
@@ -237,6 +237,8 @@ h3 {
   justify-content: space-between;
   gap: 10px;
   flex-wrap: wrap;
+  break-after: avoid-page;
+  page-break-after: avoid;
 }
 
 .project-head h2 {
@@ -257,6 +259,10 @@ h3 {
 
 .project-media {
   margin: 12px 0 2px;
+  break-before: avoid-page;
+  page-break-before: avoid;
+  break-after: avoid-page;
+  page-break-after: avoid;
 }
 
 .project-media img {
@@ -569,10 +575,14 @@ ul ul li::before {
 }
 
 @media print {
+  html {
+    font-size: 14px;
+  }
+
   body {
     background: #fff;
-    font-size: 11pt;
-    line-height: 1.5;
+    font-size: 9.5pt;
+    line-height: 1.42;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -595,6 +605,56 @@ ul ul li::before {
     padding: 7mm;
   }
 
+  .photo {
+    width: 110px;
+    height: 150px;
+  }
+
+  .hero h1 {
+    font-size: 15.5pt;
+    line-height: 1.3;
+  }
+
+  .profile-top h2 {
+    font-size: 13pt;
+  }
+
+  .role,
+  .profile-grid,
+  .career-grid,
+  .block,
+  li {
+    font-size: 9pt;
+  }
+
+  h2,
+  .project-head h2,
+  .intro-section h2 {
+    font-size: 10pt;
+  }
+
+  h3,
+  .career-head h3,
+  .diagram-card h3 {
+    font-size: 9.75pt;
+  }
+
+  .career-period,
+  .project-meta,
+  .meta,
+  .project-media figcaption,
+  .footer {
+    font-size: 8.5pt;
+  }
+
+  .chip {
+    font-size: 8.25pt;
+  }
+
+  .block strong {
+    font-size: 9.1pt;
+  }
+
   .chip {
     border: 1px solid #c8d7f0;
     background: #fff;
@@ -606,6 +666,29 @@ ul ul li::before {
 
   .project-media img {
     max-height: 85mm;
+  }
+
+  .print-page {
+    break-before: auto;
+    page-break-before: auto;
+  }
+
+  .flow-diagram li {
+    font-size: 8.25pt;
+    line-height: 1.3;
+  }
+
+  .compare-columns strong,
+  .arch-root,
+  .arch-node-title {
+    font-size: 8.25pt;
+  }
+
+  .compare-columns li,
+  .arch-node,
+  .arch-subnodes li {
+    font-size: 7.8pt;
+    line-height: 1.35;
   }
 
   li::before {
@@ -720,10 +803,6 @@ ul ul li::before {
     padding-top: 14px;
   }
 
-  .photo {
-    width: 110px;
-    height: 110px;
-  }
 
   .profile-grid {
     grid-template-columns: 1fr;

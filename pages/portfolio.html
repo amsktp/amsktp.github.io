@@ -97,21 +97,33 @@
             <h3>RGB vs Lab 삽입 차이</h3>
             <div class="compare-columns">
               <div>
-                <img src="../assets/images/project1-image.png" alt="프로젝트 1 관련 이미지" />
+                <figure>
+                  <img src="../assets/images/rgb_embed.png" alt="프로젝트 1 관련 이미지" />
+                  <figcaption>RGB 채널에 "Secret" 삽입</figcaption>
+                </figure>
+                <figure>
+                  <img src="../assets/images/rgb(b)_embed.png" alt="프로젝트 1 관련 이미지" />
+                  <figcaption>B 채널 추출</figcaption>
+                </figure>
                 <strong>RGB 채널 삽입</strong>
                 <ul>
                   <li>채널 간 간섭으로 색 번짐 위험</li>
-                  <li>밝기/채도 변화에서 노이즈 증가</li>
-                  <li>가시성 저하를 위한 강도 제한 필요</li>
+                  <li>기존 픽셀 값에 의해 검출 안정성 저하</li>
                 </ul>
               </div>
               <div>
-                <img src="../assets/images/project1-image.png" alt="프로젝트 1 관련 이미지" />
+                <figure>
+                  <img src="../assets/images/lab_embed.png" alt="프로젝트 1 관련 이미지" />
+                  <figcaption>Lab 색 공간에 "Secret" 삽입</figcaption>
+                </figure>
+                <figure>
+                  <img src="../assets/images/lab(a)_embed.png" alt="프로젝트 1 관련 이미지" />
+                  <figcaption>a 채널 추출</figcaption>
+                </figure>
                 <strong>Lab 채널 삽입</strong>
                 <ul>
                   <li>지각 기반 채널 분리로 왜곡 최소화</li>
-                  <li>촬영/압축 후에도 복원 안정성 우수</li>
-                  <li>강도 제어 범위가 넓어 튜닝 유연</li>
+                  <li>검출 안정성 향상</li>
                 </ul>
               </div>
             </div>
