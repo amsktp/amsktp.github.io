@@ -608,7 +608,7 @@ ul ul li::before {
   page-break-inside: avoid;
 }
 
-@media screen and (min-width: 1360px) {
+@media screen and (min-width: 1680px) {
   .toc {
     display: block;
     position: fixed;
@@ -627,8 +627,8 @@ ul ul li::before {
   }
 
   .wrap {
-    width: min(1120px, calc(100vw - 340px));
-    margin: 34px 24px 60px 300px;
+    width: min(1120px, calc(100vw - 560px));
+    margin: 34px auto 60px;
   }
 
   .panel {
